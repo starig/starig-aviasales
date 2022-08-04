@@ -15,7 +15,7 @@ const Content = () => {
     stops.sort((a, b) => a - b);
     return (
         <div className={styles.content}>
-            <div className={'filter'}>
+            <div className={styles.filter}>
                 <h4>Количество пересадок</h4>
                 <button className={styles.clearFilters} onClick={() => dispatch(clearFilter())}>
                     Сбросить фильтры

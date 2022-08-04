@@ -23,7 +23,7 @@ const Filter = ({value}) => {
             setCheckboxStatus(!checkboxStatus);
             dispatch(setStopValue(value));
         }}>
-            <input type="checkbox" checked={checkboxStatus} readOnly/>
+            <input type="checkbox" checked={checkboxStatus} readOnly className={styles.checkbox}/>
             <div>
                 {value + ' ' + stopsWord}
             </div>

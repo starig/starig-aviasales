@@ -1,6 +1,7 @@
 .ticket {
   display: flex;
   border: 1px #284B63 solid;
+  border-radius: 5px;
   width: 700px;
   padding: 25px;
   margin-bottom: 25px;
@@ -29,7 +30,8 @@
       }
     }
     .logoImg {
-      height: 100px;
+      width: 150px;
+      height: auto;
     }
   }
 
@@ -62,4 +64,20 @@
     }
   }
 
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .ticket {
+
+    .header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+
+      .buyButton {
+        margin-top: 10px;
+      }
+    }
+  }
 }

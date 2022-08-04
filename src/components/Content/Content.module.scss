@@ -1,7 +1,18 @@
 .content {
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: 4fr 8fr;
+  grid-column-gap: 50px;
+  justify-items: center;
   width: 100%;
+  padding-top: 50px;
+
+  .tickets {
+    justify-self: start;
+  }
+
+  .filter {
+    justify-self: end;
+  }
 
   .clearFilters {
     width: 100%;
@@ -18,5 +29,16 @@
       cursor: pointer;
       background-color: #153243;
     }
+  }
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .content {
+    display: flex;
+    justify-content: center;
+  }
+
+  .filter {
+    margin-right: 50px;
   }
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Ticket.module.scss';
-import logoImg from './../../assets/logo.webp';
+import logoImg from './../../assets/ticketLogo.png';
 
 const Ticket = ({
                     origin,
