@@ -1,0 +1,65 @@
+.ticket {
+  display: flex;
+  border: 1px #284B63 solid;
+  width: 700px;
+  padding: 25px;
+  margin-bottom: 25px;
+
+  .header {
+    display: grid;
+    grid-row-gap: 10px;
+    justify-items: center;
+    border-right: 1px #284B63 solid;
+    padding-right: 50px;
+
+    .buyButton {
+      cursor: pointer;
+      width: 150px;
+      padding: 10px 0;
+      border: none;
+      border-radius: 15px;
+      background-color: #153243;
+      color: #F4F9E9;
+      font-weight: 400;
+      font-size: 20px;
+      transition: background-color .4s ease-in-out;
+
+      &:hover {
+        background-color: #2e6c96;
+      }
+    }
+    .logoImg {
+      height: 100px;
+    }
+  }
+
+  .body {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 25px;
+
+    .time {
+      font-weight: 500;
+      font-size: 30px;
+    }
+
+    .place {
+      text-transform: uppercase;
+      font-weight: 400;
+    }
+
+    .date {
+      font-size: 15px;
+      text-transform: uppercase;
+      font-weight: 300;
+      color: #B4B8AB;
+    }
+
+    .stops {
+      font-weight: 500;
+    }
+  }
+
+}

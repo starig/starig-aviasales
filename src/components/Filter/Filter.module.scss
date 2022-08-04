@@ -1,0 +1,17 @@
+.filter {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 25px;
+  border: 1px #153243 solid;
+  border-radius: 15px;
+  background-color: #284B63;
+  color: #F4F9E9;
+  margin-bottom: 10px;
+  padding: 5px 10px;
+
+  &:hover {
+    cursor: pointer;
+    background-color: #153243;
+  }
+}
