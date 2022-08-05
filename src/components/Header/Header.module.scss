@@ -1,0 +1,17 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 128px;
+  background-color: #0c78fe;
+  color: #F4F9E9;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 32px;
+
+  .headerLogoImg {
+    height: 100px;
+    width: auto;
+    margin-right: 50px;
+  }
+}
