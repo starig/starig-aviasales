@@ -18,7 +18,7 @@ const Filter: FC<IFilter> = ({value}) => {
 
     const dispatch = useDispatch();
     //correct form of 'пересадка' word
-    let stopsWord = 'пересадок'
+    let stopsWord: string = 'пересадок'
     if (value === 1) {
         stopsWord = 'пересадка'
     } else if (value > 1 && value < 5) {
