@@ -1,17 +1,20 @@
-import React from 'react';
+import React, {FC} from 'react';
 import Ticket from "../Ticket/Ticket";
 import styles from './Content.module.scss';
 import {useDispatch, useSelector} from "react-redux";
 import Filter from "../Filter/Filter";
 import {clearFilter} from "../../redux/ticketSlice/ticketSlice";
+import {RootState} from "../../redux/store";
 
-const Content = () => {
-    const {tickets, filteredTickets} = useSelector(state => state.tickets);
+const Content: FC = () => {
+    const {tickets, filteredTickets} = useSelector((state: RootState) => state.tickets);
     const dispatch = useDispatch();
-    const stops = [];
+    const stops: number[] = [];
+    // calculate amount of stops
     tickets.forEach(item => {
         !stops.includes(item.stops) && stops.push(item.stops)
     });
+    // sort stops
     stops.sort((a, b) => a - b);
     return (
         <div className={styles.content}>
@@ -26,7 +29,7 @@ const Content = () => {
             </div>
             <div className={styles.tickets}>
                 {
-                    filteredTickets.map((ticket, id) => <Ticket key={id} {...ticket} />)
+                    filteredTickets.map((ticket, id: number) => <Ticket key={id} {...ticket} />)
                 }
             </div>
         </div>

@@ -1,8 +1,9 @@
-import React from 'react';
+import React, {FC} from 'react';
 import styles from './Ticket.module.scss';
 import logoImg from './../../assets/ticketLogo.png';
+import {ITicket} from "../../types";
 
-const Ticket = ({
+const Ticket: FC<ITicket> = ({
                     origin,
                     origin_name,
                     destination,
@@ -14,7 +15,8 @@ const Ticket = ({
                     stops,
                     price
                 }) => {
-    let stopsWord = 'пересадок'
+    // correct form of 'пересадка' word
+    let stopsWord: string = 'пересадок'
     if (stops === 1) {
         stopsWord = 'пересадка'
     } else if (stops > 1 && stops < 5) {
